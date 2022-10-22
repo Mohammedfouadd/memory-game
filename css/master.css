@@ -1,0 +1,131 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, tahoma, sans-serif;
+}
+img{
+    width: 140px;
+    height: 140px;
+    margin: 28px 0;
+}
+.control-buttons,
+.finish {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(3, 169, 244, 0.9);
+  }
+  .finish{
+    display: none;
+  }
+  .control-buttons span,
+  .finish span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F44336;
+    color: #FFF;
+    padding: 15px 25px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+.info-container {
+    width: 1000px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 15px;
+    border-radius: 4px;
+}
+.game-blocks{
+    width: 1020px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+ .no-clicking{
+    pointer-events: none;
+}
+.game-blocks .block{
+  
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #2196F3;
+    margin-bottom: 10px;
+    background-color: #333;height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 0 10px 20px;
+   
+}
+.game-blocks .face{
+background-color: #333;
+position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  backface-visibility: hidden;
+}
+.game-blocks .block .front{
+    background-color: #333;
+    line-height: 200px;
+}
+
+.game-blocks .block .front::before{
+    content: "!";
+    color: #fff;
+    font-size: 140px;
+    font-weight: bold;
+}
+.game-blocks .block .back{
+    background-color: #607D8B;
+    transform: rotateY(180deg);
+}
+.game-blocks .is-flipped,
+.game-blocks .has-match{
+    transform: rotateY(180deg);
+    pointer-events: none;
+
+}
+table {
+    width: 600px;
+    margin: 20px auto;
+    background-color: #eee;
+    text-align: center;
+    padding: 10px;
+   
+   
+    
+}
+table tbody tr{
+    background-color: #fff;
+    
+    height: 50px;
+}
+
+table   span{
+   background-color: rgb(211, 72, 104);
+   padding: 5px;
+   color: white;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+
